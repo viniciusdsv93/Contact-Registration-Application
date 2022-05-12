@@ -35,7 +35,7 @@ The first area have inputs that are going to validate the data when the user cli
 
 On the other hand, the second area have a table that is going to be filled with the data stored in the database by the moment the user clicks on the button 'Clique aqui para atualizar'.
 
-In this area, to each line there are two buttons, one tho change and another one do delete data.
+In this area, to each line there are two buttons, one to change and another one to delete data.
 
 After clicking on the button 'Alterar', the application is going to open a modal with inputs to be changed, with the options of confirm or cancel the modification.
 
