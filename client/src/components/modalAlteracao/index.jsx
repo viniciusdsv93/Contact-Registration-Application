@@ -2,9 +2,17 @@ import React from "react";
 import * as S from "./styled";
 
 const ModalAlteracao = ({ dadosParaAlteracao, setDadosParaAlteracao, alterarDados, setAlterar }) => {
+	const mascaraCPF = (valor) => {
+		return valor
+			.replace(/\D/g, "") // substitui qualquer caractere não numérico por ""
+			.replace(/(\d{3})(\d)/, "$1.$2") // captura 2 grupos de números, sendo o primeiro com 3 dígitos e o segundo com 1, adicionando um ponto entre o primeiro e o segundo grupo
+			.replace(/(\d{3})(\d)/, "$1.$2") // repete a mesma fórmula
+			.replace(/(\d{3})(\d{1,2})/, "$1-$2"); // insere um traço entre dois grupos de caracteres numéricos, sendo o primeiro com 3 dígitos e o segundo com 2 dígitos
+	};
+
 	return (
 		<S.ModalAlteracao>
-			<h5>Insira os dados que deseja alterar:</h5>
+			<p>Insira os dados que deseja alterar:</p>
 			<S.FormModal action='#' onSubmit={(e) => alterarDados(dadosParaAlteracao.id, e)}>
 				<S.InputModal
 					value={dadosParaAlteracao.nome}
@@ -26,11 +34,13 @@ const ModalAlteracao = ({ dadosParaAlteracao, setDadosParaAlteracao, alterarDado
 				/>
 				<S.InputModal
 					value={dadosParaAlteracao.cpf}
-					onChange={(e) => setDadosParaAlteracao({ ...dadosParaAlteracao, cpf: e.target.value })}
+					onChange={(e) =>
+						setDadosParaAlteracao({ ...dadosParaAlteracao, cpf: mascaraCPF(e.target.value) })
+					}
 					placeholder='Digite o novo CPF...'
 					type='text'
-					minLength='11'
-					maxLength='11'
+					minLength='14'
+					maxLength='14'
 				/>
 				<S.InputModal
 					value={dadosParaAlteracao.telefone}
@@ -38,7 +48,7 @@ const ModalAlteracao = ({ dadosParaAlteracao, setDadosParaAlteracao, alterarDado
 					placeholder='Digite o novo telefone...'
 					type='text'
 					minLength='8'
-					maxLength='12'
+					maxLength='14'
 					required
 				/>
 				<S.InputModal

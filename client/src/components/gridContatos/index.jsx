@@ -75,8 +75,8 @@ const GridContatos = () => {
 	};
 
 	return (
-		<S.Grid>
-			<table>
+		<S.Grid className='table-responsive-lg'>
+			<table className='table table-striped table-hover table-responsive-md'>
 				<thead>
 					<tr>
 						<th>ID</th>

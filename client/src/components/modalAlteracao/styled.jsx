@@ -6,10 +6,10 @@ export const ModalAlteracao = styled.div`
 	right: 50%;
 	transform: translate(50%, -50%);
 	border-radius: 10px;
-	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+	box-shadow: 10px 10px 100px hsl(212deg 49% 36% / 30%);
 	padding: 16px;
 	width: auto;
-	background-color: #e9e9e9;
+	background-color: #f8f8f8;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -17,8 +17,10 @@ export const ModalAlteracao = styled.div`
 `;
 
 export const InputModal = styled.input`
-	border-radius: 5px;
-	border: 1px solid black;
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px hsl(212deg 49% 36% / 30%);
+	outline: none;
+	border: none;
 	width: 300px;
 	padding: 5px 15px;
 	font-size: 16px;
@@ -27,10 +29,11 @@ export const InputModal = styled.input`
 export const CancelButton = styled.button`
 	padding: 5px 10px;
 	color: #fff;
-	font-family: "Courier New", Courier, monospace;
-	background-color: #fa1b1b;
+	font-family: "Poppins", sans-serif;
+	background-color: hsl(0, 78%, 62%);
 	border-radius: 5px;
 	border: none;
+	box-shadow: 5px 5px 10px hsl(212deg 49% 36% / 30%);
 	font-weight: bold;
 	font-size: 16px;
 	cursor: pointer;
@@ -49,10 +52,11 @@ export const FormModal = styled.form`
 export const FormModalSubmit = styled.input`
 	padding: 5px 10px;
 	color: #fff;
-	font-family: "Courier New", Courier, monospace;
-	background-color: #70fa1b;
+	font-family: "Poppins", sans-serif;
+	background-color: #005ee2;
 	border-radius: 5px;
 	border: none;
+	box-shadow: 5px 5px 10px hsl(212deg 49% 36% / 30%);
 	font-weight: bold;
 	font-size: 16px;
 	cursor: pointer;

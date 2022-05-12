@@ -49,8 +49,7 @@ const InputsArea = () => {
 
 	return (
 		<S.InputsField>
-			<h4>Por favor, insira aqui os dados do contato a ser cadastrado:</h4>
-
+			<p>Por favor, insira aqui os dados do contato a ser cadastrado:</p>
 			<S.Form action='#' onSubmit={(e) => inserirNovoContato(e)}>
 				<S.Input
 					value={dadosPost.nome}
@@ -84,7 +83,7 @@ const InputsArea = () => {
 					placeholder='Digite o telefone...'
 					type='text'
 					minLength='8'
-					maxLength='12'
+					maxLength='14'
 					required
 				/>
 				<S.Input

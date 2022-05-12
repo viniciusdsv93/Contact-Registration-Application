@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`    
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -16,5 +16,11 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(234, 12%, 34%);
+    }
+
+    input {
+        color: hsl(234, 12%, 34%);
     }
 `;
