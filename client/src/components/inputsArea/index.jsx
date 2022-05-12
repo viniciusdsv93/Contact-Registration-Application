@@ -39,6 +39,14 @@ const InputsArea = () => {
 			});
 	};
 
+	const mascaraCPF = (valor) => {
+		return valor
+			.replace(/\D/g, "") // substitui qualquer caractere não numérico por ""
+			.replace(/(\d{3})(\d)/, "$1.$2") // captura 2 grupos de números, sendo o primeiro com 3 dígitos e o segundo com 1, adicionando um ponto entre o primeiro e o segundo grupo
+			.replace(/(\d{3})(\d)/, "$1.$2") // repete a mesma fórmula
+			.replace(/(\d{3})(\d{1,2})/, "$1-$2"); // insere um traço entre dois grupos de caracteres numéricos, sendo o primeiro com 3 dígitos e o segundo com 2 dígitos
+	};
+
 	return (
 		<S.InputsField>
 			<h4>Por favor, insira aqui os dados do contato a ser cadastrado:</h4>
@@ -64,11 +72,11 @@ const InputsArea = () => {
 				/>
 				<S.Input
 					value={dadosPost.cpf}
-					onChange={(e) => setDadosPost({ ...dadosPost, cpf: e.target.value })}
+					onChange={(e) => setDadosPost({ ...dadosPost, cpf: mascaraCPF(e.target.value) })}
 					placeholder='Digite o cpf...'
 					type='text'
-					minLength='11'
-					maxLength='11'
+					minLength='14'
+					maxLength='14'
 				/>
 				<S.Input
 					value={dadosPost.telefone}
