@@ -31,7 +31,7 @@ Para abrir a aplicação, execute 'npm start' no terminal aberto na pasta 'clien
 
 A aplicação possui duas áreas, a primeira com inputs para inserir um novo contato, e outra com uma tabela onde serão inseridos os dados salvos no banco de dados.
 
-A primeira área contém inputs que irão validar as informações inseridas no momento em que o usuário clicar no botão de 'Inserir novo contato', exibindo instruções para corrigir os dados passados.
+A primeira área contém inputs que irão validar as informações inseridas no momento em que o usuário clicar no botão 'Inserir novo contato', exibindo instruções para corrigir os dados passados.
 
 Por sua vez, a segunda área contém uma tabela que será preenchida com os dados armazenados no banco de dados no momento em que o usuário clicar no botão 'Clique para atualizar'.
 
